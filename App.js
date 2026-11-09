@@ -3,6 +3,7 @@ const cors = require("cors");
 const mysql = require("mysql2");
 const pruebaRoutes = require ("./src/routes/pruebaRoutes")
 const usuariosRoutes = require("./src/routes/usuarioRoutes");
+const productosRoutes = require("./src/routes/productosRoutes");
 
 const app = express();
 const PORT = 8000;
@@ -13,6 +14,7 @@ app.use(cors());
 
 app.use("/api", pruebaRoutes);
 app.use("/api", usuariosRoutes);
+app.use("/api", productosRoutes);
 
 
 const conexion = mysql.createConnection({
